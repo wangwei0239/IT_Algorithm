@@ -41,6 +41,17 @@ public class P8 {
 		stack.push(i);
 	}
 	
+	public static int getLastElement(Stack<Integer> stack){
+		int result = stack.pop();
+		if(stack.isEmpty()){
+			return result;
+		}else {
+			int last = getLastElement(stack);
+			stack.push(result);
+			return last;
+		}
+	}
+	
 	
 	
 //------------------not right 1---------------------
